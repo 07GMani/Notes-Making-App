@@ -3,8 +3,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import NoteCard from "../../components/Cards/NoteCard";
 import { MdAdd } from "react-icons/md";
 import AddEditNotes from "./AddEditNotes";
-import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
+import Modal from "react-modal";
 import axiosInstance from "../../utils/axiosInstance";
 import Toast from "../../components/ToastMessage/Toast";
 import EmptyCard from "../../components/EmptyCard/EmptyCard";
@@ -23,9 +23,9 @@ const Home = () => {
     type: "add",
   });
 
-  const [userInfo, setUserInfo] = useState(null);
   const [isSearch, setIsSearch] = useState(false);
   const [allNotes, setAllNotes] = useState([]);
+  const [userInfo, setUserInfo] = useState(null);
   const navigate = useNavigate();
 
   const handleEdit = (noteDetails) => {
@@ -81,7 +81,7 @@ const Home = () => {
       const response = await axiosInstance.delete("/delete-note/" + noteId);
 
       if (response.data && !response.data.error) {
-        showToastMessage("Notes Deleted Sucessfully", "delete");
+        showToastMessage("Note Deleted Sucessfully", "delete");
         getAllNotes();
       }
     } catch (error) {

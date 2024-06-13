@@ -14,7 +14,7 @@ const Navbar = ({ userInfo, onSearchNote,handleClearSearch }) => {
 
   const handleSearch = () => {
     if (searchQuery) {
-      onSearchNote(searchQuery);
+      onSearchNote(searchQuery );
     }
   };
 

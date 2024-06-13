@@ -304,7 +304,7 @@ app.get("/search-notes/", authenticateToken, async (req, res) => {
     });
     return res.json({
       error: false,
-      matchingNotes,
+      notes: matchingNotes,
       message: "Note matching the search query retrieved successfully.",
     });
   } catch (error) {

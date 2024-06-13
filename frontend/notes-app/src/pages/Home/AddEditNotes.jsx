@@ -50,7 +50,7 @@ const AddEditNotes = ({
       });
 
       if (response.data && response.data.note) {
-        showToastMessage("Notes Updated Sucessfully");
+        showToastMessage("Note Updated Sucessfully");
         getAllNotes();
         onClose();
       }
