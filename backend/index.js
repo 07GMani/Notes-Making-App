@@ -17,9 +17,11 @@ const { authenticateToken } = require("./utilities");
 
 app.use(express.json());
 
-app.use(
+app. use(
   cors({
-    origin: "*",
+    origin: ["https://deploy-mer-1whq.vercel.app],
+    methods:["POST", "GET"],
+    credentials: true
   })
 );
 
