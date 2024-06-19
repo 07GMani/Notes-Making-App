@@ -19,9 +19,7 @@ app.use(express.json());
 
 app. use(
   cors({
-    origin: ["https://deploy-mer-1whq.vercel.app],
-    methods:["POST", "GET"],
-    credentials: true
+    origin: "*",
   })
 );
 
